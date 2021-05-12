@@ -18,18 +18,55 @@ const promptUser = () => {
     {
         type: 'input',
         name: 'name',
-        message: 'What is your Name?'
+        message: 'What is your Name? (required)',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('please enter yourname!');
+                return false;                
+            }
+        }
     },
     {
         type: 'input',
         name: 'github',
-        message: 'What is your Github username?'
+        message: 'What is your Github username? (required)',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('please enter github!');
+                return false;                
+            }
+        }
     },
     {
         type: 'input',
         name: 'about',
-        message: 'Provide some information about yourself'
-    }
+        message: 'Provide some information about yourself (required)',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('please enter information about yourself!');
+                return false;                
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'link',
+        message: 'Enter the GitHub link to your project. (Required)',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('please enter your GitHub link');
+                return false;                
+            }
+        }
+      }
 ]);
 };
 
